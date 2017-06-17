@@ -1,0 +1,48 @@
+{
+  "name": "ecommapi",
+  "version": "1.0.0",
+  "description": "UI for Ecommerce App using React and Flux ",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d .",
+    "build": "browserify . | uglifyjs -cm > js/bundle.min.js",
+    "test": "Ecomm Flying"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devndone/EcommUi.git"
+  },
+  "keywords": [
+    "React",
+    "Ecommerce",
+    "App",
+    "Flux"
+  ],
+  "author": "devndone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devndone/EcommUi/issues"
+  },
+  "homepage": "https://github.com/devndone/EcommUi#readme",
+  "devDependencies": {
+    "browserify": "~13.1.0",
+    "envify": "~3.4.1",
+    "react": "^15.3.0",
+    "reactify": "^1.1",
+    "watchify": "~3.7.0"
+  },
+  "dependencies": {
+   "flux": "^2.0.0",
+   "keymirror": "^0.1.1",
+   "react": "^15.3.0",
+   "react-dom": "^15.3.0",
+   "uglifyjs": "^2.4.10",
+   "underscore": "^1.8.3"
+ },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}
